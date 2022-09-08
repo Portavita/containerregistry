@@ -89,5 +89,7 @@ def Scheme(endpoint):
   """Returns https scheme for all the endpoints except localhost."""
   if endpoint.startswith('localhost:'):
     return 'http'
+  elif endpoint.startswith('registry-docker-registry:'):
+    return 'http'
   else:
     return 'https'
